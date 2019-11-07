@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Abstract UI
 
-## Available Scripts
+实现 2 大类组件：布局组件、元素组件。
 
-In the project directory, you can run:
+## 组件设计原则
 
-### `yarn start`
+- 禁止元素（是什么）的实现包含布局（怎么摆放）的声明
+- ECMA 规范下的原生 API 优先
+- 单一职责
+- 最少功能
+- 组合优先
+- 主题化
+- 最小体积
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 参与开发
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### 熟悉工作方式
 
-### `yarn test`
+[`abstract-ui`][abstract-ui] 的工作方式主要涉及 [CDD](https://blog.hichroma.com/component-driven-development-ce1109d56c8e)、[TDD](https://zh.wikipedia.org/zh-cn/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91)、[Gitflow](https://github.com/nvie/gitflow)。
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[abstract-ui]: #
 
-### `yarn build`
+#### 安装依赖
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[`abstract-ui`][abstract-ui] 使用 [`YARN`][YARN] 包管理器，执行 `npm i` 安装依赖。
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[abstract-ui]: #
+[YARN]: https://yarnpkg.com/zh-Hans/docs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 开发模式
 
-### `yarn eject`
+```shell
+yarn storybook
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 构建
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+yarn build-storybook
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 预览
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> 预览前必需先构建。
 
-## Learn More
+```shell
+yarn serve
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 重置工程
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```shell
+yarn remount
+```
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> 包括：删除缓存、构建、报告、`node_modules`、重新安装包等。
