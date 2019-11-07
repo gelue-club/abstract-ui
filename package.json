@@ -45,6 +45,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": ">=10.16.3"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.11.0",
@@ -58,5 +61,21 @@
     "@storybook/addons": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "prettier": "^1.18.2"
-  }
+  },
+  "private": false,
+  "author": {
+    "name": "iyowei",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/iTonyYo"
+  },
+  "repository": {
+    "url": "git@github.com:gelue-club/abstract-ui.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/gelue-club/abstract-ui",
+  "bugs": "https://github.com/gelue-club/abstract-ui/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
 }
