@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build": "build-storybook -s public",
     "format": "npx prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "prettier": {

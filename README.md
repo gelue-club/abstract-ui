@@ -17,25 +17,25 @@
 
 [`abstract-ui`][abstract-ui] 的工作方式主要涉及 [CDD](https://blog.hichroma.com/component-driven-development-ce1109d56c8e)、[TDD](https://zh.wikipedia.org/zh-cn/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91)、[Gitflow](https://github.com/nvie/gitflow)。
 
-[abstract-ui]: #
+[abstract-ui]: https://github.com/gelue-club/abstract-ui
 
 #### 安装依赖
 
-[`abstract-ui`][abstract-ui] 使用 [`YARN`][YARN] 包管理器，执行 `npm i` 安装依赖。
+[`abstract-ui`][abstract-ui] 使用 [`YARN`][YARN] 包管理器，执行 `yarn install` 安装依赖。
 
-[abstract-ui]: #
+[abstract-ui]: https://github.com/gelue-club/abstract-ui
 [YARN]: https://yarnpkg.com/zh-Hans/docs
 
 #### 开发模式
 
 ```shell
-yarn storybook
+yarn start
 ```
 
 #### 构建
 
 ```shell
-yarn build-storybook
+yarn build
 ```
 
 #### 预览
