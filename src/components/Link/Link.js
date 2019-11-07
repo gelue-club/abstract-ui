@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './Link.css';
@@ -15,12 +16,23 @@ import './Link.css';
  *
  * 若放的是文字，文字无下划线
  */
-function Link({ className, style, children, to }) {
+function Link({ to, children, className, style }) {
   return (
     <a className={cn('clean-link link', className)} style={style} href={to}>
       {children}
     </a>
   );
 }
+
+Link.propTypes = {
+  to: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.object,
+  ]),
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
 
 export default Link;

@@ -21,10 +21,10 @@
 
 #### 安装依赖
 
-[`abstract-ui`][abstract-ui] 使用 [`YARN`][YARN] 包管理器，执行 `yarn install` 安装依赖。
+[`abstract-ui`][abstract-ui] 使用 [`YARN`][yarn] 包管理器，执行 `yarn install` 安装依赖。
 
 [abstract-ui]: https://github.com/gelue-club/abstract-ui
-[YARN]: https://yarnpkg.com/zh-Hans/docs
+[yarn]: https://yarnpkg.com/zh-Hans/docs
 
 #### 开发模式
 
