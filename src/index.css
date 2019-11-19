@@ -22,3 +22,7 @@
 .left {
   float: left;
 }
+
+.bg-test {
+  background: radial-gradient(ellipse at center, rgba(254,254,254,0) 0%, rgb(64, 253, 136) 100%);
+}

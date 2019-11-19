@@ -1,0 +1,15 @@
+.congruent-grid {
+  *zoom: 1;
+  overflow: hidden;
+}
+
+.congruent-grid:before,
+.congruent-grid:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+
+.congruent-grid:after {
+  clear: both;
+}
