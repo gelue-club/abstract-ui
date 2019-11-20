@@ -9,20 +9,15 @@ import isReactElement from './isReactElement';
 
 import './CongruentGrid.css';
 
-function CongruentGrid(props) {
-  const {
-    id,
-    className,
-    style,
-
-    children,
-
-    width,
-
-    rowHeight,
-    columnWidth,
-  } = props;
-
+function CongruentGrid({
+  width,
+  rowHeight,
+  columnWidth,
+  children,
+  id,
+  className,
+  style,
+}) {
   return (
     <div
       id={id}

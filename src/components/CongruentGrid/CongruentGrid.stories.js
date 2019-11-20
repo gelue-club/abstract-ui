@@ -7,7 +7,6 @@ import DiyCell from './DiyCell';
 const styleFill = { width: '100%', height: '100%' };
 const demoEle = () => <div className="bg-test" style={styleFill} />;
 
-// 链接盒子
 storiesOf('<CongruentGrid />', module)
   .add('平铺', () => (
     <CongruentGrid width="100%" rowHeight="112px" columnWidth="33.333333%">
