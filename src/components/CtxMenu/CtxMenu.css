@@ -1,0 +1,31 @@
+.ctx-menu {
+  position: relative;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  width: 70px;
+  height: 112px;
+
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #fff;
+
+  background: #2D2F2F;
+}
+
+.ctx-menu.hover {
+  border-color: #EA514E;
+}
+
+/*  */
+
+.ctx-menu-name {
+  position: absolute;
+  bottom: 16px;
+
+  text-align: center;
+
+  width: 100%;
+}

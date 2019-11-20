@@ -26,3 +26,7 @@
 .bg-test {
   background: radial-gradient(ellipse at center, rgba(254,254,254,0) 0%, rgb(64, 253, 136) 100%);
 }
+
+.bg-test-2 {
+  background: radial-gradient(ellipse at center, rgba(255,146,10,1) 0%, rgba(255,175,75,0) 100%);
+}
