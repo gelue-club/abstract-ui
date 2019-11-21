@@ -10,16 +10,12 @@
 
   box-sizing: border-box;
   border-radius: 3px;
-  border: 1px solid #fff;
-
-  background: #2D2F2F;
+  border: 1px solid transparent;
 }
 
 .ctx-menu.hover {
   border-color: #EA514E;
 }
-
-/*  */
 
 .ctx-menu-name {
   position: absolute;
