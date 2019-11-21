@@ -5,28 +5,9 @@ import Circle from '../Circle/Circle';
 import Stack from '../Stack/Stack';
 import XyCenter from '../XyCenter/XyCenter';
 import IconPublic from '../SvgIcon/IconPublic';
+import TextBlock from '../TextBlock/TextBlock';
 
 import './CtxMenu.css';
-
-function TextBlock({ size, children, className }) {
-  return (
-    <div
-      className={cn('text-block', className)}
-      style={{
-        fontSize: size,
-        lineHeight: size,
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-
-        height: size,
-
-        overflow: 'hidden',
-      }}
-    >
-      {children}
-    </div>
-  );
-}
 
 function CtxMenu({ className, style, id }) {
   const [hover, updateHoverStatus] = useState(false);
