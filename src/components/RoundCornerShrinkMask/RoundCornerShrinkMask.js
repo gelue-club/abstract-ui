@@ -1,0 +1,34 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import merge from 'deepmerge';
+import cn from 'classnames';
+
+function RoundCornerShrinkMask({ radius, children, className, style = {} }) {
+  return (
+    <div
+      className={cn('round-corner-shrink-mask', className)}
+      style={merge(
+        {
+          display: 'inline-block',
+          overflow: 'hidden',
+
+          borderRadius: radius,
+        },
+        style,
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
+RoundCornerShrinkMask.propTypes = {
+  radius: PropTypes.string.isRequired,
+
+  children: PropTypes.oneOfType([PropTypes.object]).isRequired,
+
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
+
+export default RoundCornerShrinkMask;
