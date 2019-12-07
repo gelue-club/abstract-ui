@@ -31,7 +31,10 @@
     "Patch"
   ],
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "react-hooks/exhaustive-deps": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -52,19 +55,24 @@
     "classnames": "^2.2.6",
     "deepmerge": "^4.2.2",
     "is-fn": "^2.0.0",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
+    "qrcode.react": "^1.0.0",
     "react": "^16.12.0",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
+    "react-draggable": "^4.2.0",
     "react-responsive": "^8.0.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "3.3.0",
+    "react-sizeme": "^2.6.10",
     "simplebar-react": "^2.0.10"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addon-storysource": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addon-storysource": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "prettier": "^1.19.1"
   },
   "private": false,
