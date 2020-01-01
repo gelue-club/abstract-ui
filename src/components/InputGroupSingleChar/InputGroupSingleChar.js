@@ -56,7 +56,7 @@ function InputGroupSingleChar({
   useEffect(() => {
     cachedValue = times(charCount, stubArray);
     return () => {};
-  }, []);
+  }, [charCount]);
 
   return (
     <div
