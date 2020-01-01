@@ -1,0 +1,14 @@
+input {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  border-radius: 2px;
+  border: 1px solid #EFEFEF;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+input.error {
+  border-color: #f00;
+}
