@@ -1,0 +1,67 @@
+.activating, .inputting {
+  border-radius: 5px;
+}
+
+.activating {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #f5f5f5 8%, #e1e1e1 18%, #f5f5f5 33%);
+  background-size: 800px 100%;
+}
+
+@keyframes phs-1 {
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: 800px 0;
+  }
+}
+
+@keyframes phs-2 {
+  0%{
+      background-position: -56px 0;
+  }
+  100%{
+      background-position: 744px 0;
+  }
+}
+
+@keyframes phs-3 {
+  0%{
+      background-position: -116px 0;
+  }
+  100%{
+      background-position: 684px 0;
+  }
+}
+
+@keyframes phs-4 {
+  0%{
+      background-position: -166px 0;
+  }
+  100%{
+      background-position: 634px 0;
+  }
+}
+
+@keyframes phs-5 {
+  0%{
+      background-position: -216px 0;
+  }
+  100%{
+      background-position: 584px 0;
+  }
+}
+
+@keyframes phs-6 {
+  0%{
+      background-position: -266px 0;
+  }
+  100%{
+      background-position: 534px 0;
+  }
+}
