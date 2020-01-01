@@ -3,7 +3,14 @@ import cn from 'classnames';
 import { useMediaQuery } from 'react-responsive';
 import merge from 'deepmerge';
 
-function BitmapIcon({ size, src, xsrc, className, style = {} }) {
+function BitmapIcon({
+  size,
+  src,
+  xsrc,
+  className = '',
+  style = {},
+  ...restProps
+}) {
   const _size = size.trim().split(' ');
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' });
 
@@ -30,6 +37,7 @@ function BitmapIcon({ size, src, xsrc, className, style = {} }) {
             },
         style,
       ])}
+      {...restProps}
     />
   );
 }
