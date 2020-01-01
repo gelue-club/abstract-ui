@@ -11,10 +11,13 @@ const ShrinkPanel = ({
 
   children,
 
+  className = '',
   style = {},
-  className,
+
+  ...restProps
 }) => (
   <div
+    className={cn('shrink-panel', className)}
     style={merge(
       {
         display: 'inline-block',
@@ -26,7 +29,7 @@ const ShrinkPanel = ({
       },
       style,
     )}
-    className={cn('shrink-panel', className)}
+    {...restProps}
   >
     {children}
   </div>
