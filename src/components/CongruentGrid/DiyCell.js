@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function DiyCell({ className, style, children }) {
+function DiyCell({ className, children, ...restProps }) {
   return (
-    <div className={className} style={style}>
+    <div className={className} {...restProps}>
       {children}
     </div>
   );

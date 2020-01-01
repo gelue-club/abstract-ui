@@ -14,17 +14,19 @@ function CongruentGrid({
   rowHeight,
   columnWidth,
   children,
-  id,
+
   className,
   style,
+
+  ...restProps
 }) {
   return (
     <div
-      id={id}
       style={merge(style, {
         width,
       })}
       className={cn('congruent-grid', className)}
+      {...restProps}
     >
       {Children.map(children, (ele, idx) =>
         !isReactElement(ele, 'DiyCell') ? (
