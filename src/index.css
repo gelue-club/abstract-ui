@@ -1,26 +1,116 @@
-.clean-link,
-.clean-link:hover,
-.clean-link:focus,
-.clean-link:active {
-  text-decoration: none;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.clearfix {
-  *zoom: 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
 }
 
-.clearfix:before, .clearfix:after {
-  content: '';
-  display: table;
-  line-height: 0;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+  font: 200 normal 62.5%/normal -apple-system, 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
 }
 
-.clearfix:after {
-  clear: both;
+[type='text'],
+[type='number'],
+[type='email'],
+[type='file'],
+[type='month'],
+[type='search'],
+[type='url'] {
+  outline: 0;
 }
 
-.left {
-  float: left;
+[draggable] {
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.minHeight-38 {
+	min-height: 38px;
+	height: auto !important;
+	height: 38px;
+}
+
+.min-height-118 {
+	min-height: 118px;
+	height: auto !important;
+	height: 118px;
+}
+
+.bg-test-fill-radial-gradient {
+  background: -webkit-radial-gradient(circle, white, black);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,.2), rgba(0,0,0,.9));
+  background: -moz-radial-gradient(circle, rgba(0,0,0,.2) 5%,rgba(0,0,0,.7) 60%,rgba(0,0,0,.9) 100% );
+  background: -o-radial-gradient(circle, rgba(0,0,0,.2) 5%,rgba(0,0,0,.7) 60%,rgba(0,0,0,.9) 100% );
+  background: -ms-radial-gradient(circle, rgba(0,0,0,.2) 5%,rgba(0,0,0,.7) 60%,rgba(0,0,0,.9) 100% );
+  background: -webkit-gradient(radial, from( rgba(0,0,0,.2) ), to( rgba(0,0,0,.9) ) );
+  background: radial-gradient( circle, rgba(0,0,0,.2) 5%,rgba(0,0,0,.7) 60%,rgba(0,0,0,.9) 100% );
 }
 
 .bg-test {
@@ -29,4 +119,182 @@
 
 .bg-test-2 {
   background: radial-gradient(ellipse at center, rgba(255,146,10,1) 0%, rgba(255,175,75,0) 100%);
+}
+
+.bg-aqua {
+  background: aqua;
+}
+
+.bg-aquamarine {
+  background: aquamarine;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.touch-action {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.x-center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.y-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.rela {
+	position: relative;
+}
+
+.border-box,
+.border-box:before,
+.border-box:after {
+  box-sizing: border-box;
+}
+
+.clean-link,
+.clean-link:hover,
+.clean-link:focus,
+.clean-link:active {
+  text-decoration: none;
+}
+
+.round {
+  border-radius: 3px;
+}
+
+.hide {
+  visibility: none !important;
+  display: none !important;
+}
+
+.opacity-full {
+  opacity: 0;
+  -khtml-opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+.opacity-seven {
+	opacity: 0.7;
+	-khtml-opacity: 0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+}
+
+.gaussian-blur-5 {
+  filter: blur(5px);
+  /*
+    filter: url(#blur-effect);
+      SVG blur filter applied to a SVG element ...
+      <svg id="svg-effects" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <filter id="blur-effect-1">
+          <feGaussianBlur stdDeviation="5" />
+        </filter>
+      </svg>
+  */
+}
+
+.unselectable {
+  user-select: none;
+  -khtml-user-select: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: -468px 0
+  }
+  100%{
+      background-position: 468px 0
+  }
+}
+
+.animated {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.animated-background {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #f5f5f5 8%, #eaeaea 18%, #f5f5f5 33%);
+  background-size: 800px 100%;
+}
+
+.tbl {
+  display: table;
+}
+
+.tbl-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
