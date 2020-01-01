@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import merge from 'deepmerge';
 import cn from 'classnames';
 
-function RoundCornerShrinkMask({ radius, children, className, style = {} }) {
+function RoundCornerShrinkMask({
+  radius,
+  children,
+  className = '',
+  style = {},
+  ...restProps
+}) {
   return (
     <div
       className={cn('round-corner-shrink-mask', className)}
@@ -16,6 +22,7 @@ function RoundCornerShrinkMask({ radius, children, className, style = {} }) {
         },
         style,
       )}
+      {...restProps}
     >
       {children}
     </div>
