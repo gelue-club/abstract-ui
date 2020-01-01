@@ -16,9 +16,9 @@ import './Link.css';
  *
  * 若放的是文字，文字无下划线
  */
-function Link({ to, children, className, style }) {
+function Link({ to, children, className, ...restProps }) {
   return (
-    <a className={cn('clean-link link', className)} style={style} href={to}>
+    <a className={cn('clean-link link', className)} href={to} {...restProps}>
       {children}
     </a>
   );
