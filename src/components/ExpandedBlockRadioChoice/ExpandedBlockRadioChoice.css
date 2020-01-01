@@ -1,0 +1,15 @@
+.expanded-block-radio-choice {
+  cursor: pointer;
+
+  color: #A1A2A2;
+
+  height: 28px;
+  border-radius: 3px;
+
+  background: #444646;
+}
+
+.expanded-block-radio-choice.active {
+  color: #fff;
+  background: #EA514E;
+}
