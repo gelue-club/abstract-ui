@@ -1,0 +1,13 @@
+.alert {
+  cursor: not-allowed;
+
+  color: #fff;
+  letter-spacing: 0.5px;
+
+  display: inline-block;
+  max-width: 300px;
+
+  border-radius: 3px;
+
+  background-color: #EA514E;
+}
