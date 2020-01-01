@@ -5,18 +5,25 @@ import cn from 'classnames';
 
 import './Stack.css';
 
-function Stack({ size, children, className, style }) {
-  const _size = size.trim().split(' ');
+function Stack({
+  size = '100%',
+  children,
+  className = '',
+  style,
+  ...restProps
+}) {
+  const $size = size.trim().split(' ');
 
   return (
     <div
       className={cn('stack', className)}
       style={merge(
         style,
-        _size.length === 1
-          ? { width: _size, height: _size }
-          : { width: _size[0], height: _size[1] },
+        $size.length === 1
+          ? { width: $size, height: $size }
+          : { width: $size[0], height: $size[1] },
       )}
+      {...restProps}
     >
       {Children.map(children, (ele, idx) => (
         <div
@@ -32,7 +39,8 @@ function Stack({ size, children, className, style }) {
 }
 
 Stack.propTypes = {
-  size: PropTypes.string.isRequired,
+  size: PropTypes.string,
+
   children: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
