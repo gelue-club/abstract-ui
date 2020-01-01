@@ -5,11 +5,11 @@ import Circle from '../Circle/Circle';
 import Stack from '../Stack/Stack';
 import XyCenter from '../XyCenter/XyCenter';
 import IconPublic from '../SvgIcon/IconPublic';
-import TextBlock from '../TextBlock/TextBlock';
+import SingleLineText from '../SingleLineText';
 
 import './CtxMenu.css';
 
-function CtxMenu({ className, style, id }) {
+function CtxMenu({ className, ...restProps }) {
   const [hover, updateHoverStatus] = useState(false);
 
   return (
@@ -21,8 +21,7 @@ function CtxMenu({ className, style, id }) {
       className={cn('ctx-menu', className, {
         hover,
       })}
-      id={id}
-      style={style}
+      {...restProps}
     >
       <XyCenter
         style={{
@@ -38,9 +37,9 @@ function CtxMenu({ className, style, id }) {
         </Stack>
       </XyCenter>
 
-      <TextBlock size="12px" className="ctx-menu-name">
+      <SingleLineText size="12px" className="ctx-menu-name">
         公开
-      </TextBlock>
+      </SingleLineText>
     </div>
   );
 }
