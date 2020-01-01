@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import merge from 'deepmerge';
 
-function Circle({ size, children, className, style }) {
+function Circle({ size, children, className = '', style, ...restProps }) {
   return (
     <div
       className={cn('circle', className)}
@@ -13,6 +13,7 @@ function Circle({ size, children, className, style }) {
 
         borderRadius: size,
       })}
+      {...restProps}
     >
       {children}
     </div>
