@@ -4,25 +4,22 @@ import cn from 'classnames';
 
 import './XyCenter.css';
 
-const PROPTYPES = {
-  style: PropTypes.object,
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string,
-  ]),
-  type: PropTypes.string,
-};
-
-function XyCenterTranslate({ onClick, children, className, style, id }) {
+function XyCenter({ children, className = '', ...restProps }) {
   return (
-    <div className={cn('xy-center', className)} id={id} style={style}>
+    <div className={cn('xy-center', className)} {...restProps}>
       {children}
     </div>
   );
 }
 
-XyCenterTranslate.propTypes = PROPTYPES;
+XyCenter.propTypes = {
+  className: PropTypes.string,
 
-export default XyCenterTranslate;
+  children: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string,
+  ]),
+};
+
+export default XyCenter;
