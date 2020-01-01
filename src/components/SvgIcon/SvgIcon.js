@@ -2,8 +2,8 @@ import React from 'react';
 import cn from 'classnames';
 import merge from 'deepmerge';
 
-function SvgIcon({ size, src, className, style = {} }) {
-  const _size = size.trim().split(' ');
+function SvgIcon({ size, src, className = '', style = {}, ...restProps }) {
+  const $size = size.trim().split(' ');
 
   return (
     <i
@@ -15,19 +15,20 @@ function SvgIcon({ size, src, className, style = {} }) {
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         },
-        _size.length === 1
+        $size.length === 1
           ? {
-              width: _size,
-              height: _size,
-              backgroundSize: _size,
+              width: $size,
+              height: $size,
+              backgroundSize: $size,
             }
           : {
-              width: _size[0],
-              height: _size[1],
-              backgroundSize: `${_size[0]} ${_size[1]}`,
+              width: $size[0],
+              height: $size[1],
+              backgroundSize: `${$size[0]} ${$size[1]}`,
             },
         style,
       ])}
+      {...restProps}
     />
   );
 }
