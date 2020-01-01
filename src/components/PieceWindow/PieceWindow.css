@@ -1,0 +1,29 @@
+.piece-window {
+  position: relative;
+  background-color: #2D2F2F;
+}
+
+.piece-window .piece-name {
+  position: absolute;
+  top: -29px;
+
+  width: 100%;
+
+  color: #A1A2A2;
+  text-align: center;
+  padding: 6px 0;
+  box-shadow: 0 0.5px 0 #444646;
+}
+
+.btn-close-piece {
+  position: absolute;
+  top: -22px;
+  right: 6px;
+
+  cursor: pointer;
+  background-color: #444646;
+}
+
+.btn-close-piece:hover {
+  background-color: crimson;
+}
