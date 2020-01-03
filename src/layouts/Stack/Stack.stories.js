@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Stack from './Stack';
-import Circle from '../Circle/Circle';
+import Stack from 'layouts/Stack';
+import Circle from 'components/Circle';
 
-storiesOf('<Stack />', module).add('两层圆', () => (
+storiesOf('布局.<Stack />', module).add('两层圆', () => (
   <>
     <Circle size="250px" className="left bg-test" />
     <Circle size="250px" className="left bg-test-2" />

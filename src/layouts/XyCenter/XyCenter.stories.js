@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import XyCenter from './XyCenter';
-import Circle from '../Circle/Circle';
-import Stack from '../Stack/Stack';
+import XyCenter from 'layouts/XyCenter';
+import Stack from 'layouts/Stack';
 
-storiesOf('<XyCenter />', module).add('圆点处的小圆', () => (
+import Circle from 'components/Circle';
+
+storiesOf('布局.<XyCenter />', module).add('圆点处的小圆', () => (
   <Stack size="250px">
     <Circle size="250px" className="bg-test" />
 

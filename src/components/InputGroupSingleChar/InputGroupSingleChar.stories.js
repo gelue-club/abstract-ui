@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import InputGroupSingleChar from './InputGroupSingleChar';
 
-storiesOf('<InputGroupSingleChar />', module).add('单行', () => (
+storiesOf('组件.<InputGroupSingleChar />', module).add('单行', () => (
   <InputGroupSingleChar
     charCount={10}
     width={520}

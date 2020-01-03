@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Circle from '../Circle/Circle';
-import XyCenter from '../XyCenter/XyCenter';
+import Circle from 'components/Circle';
+import XyCenter from 'layouts/XyCenter';
 
 import IconPublic from './IconPublic';
 
-storiesOf('<SvgIcon />', module).add('公开', () => (
+storiesOf('组件.<SvgIcon />', module).add('公开', () => (
   <Box>
     <IconPublic />
   </Box>

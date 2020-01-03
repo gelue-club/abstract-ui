@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 
-import Circle from '../Circle/Circle';
-import Stack from '../Stack/Stack';
-import XyCenter from '../XyCenter/XyCenter';
-import IconPublic from '../SvgIcon/IconPublic';
-import SingleLineText from '../SingleLineText';
+import Stack from 'layouts/Stack';
+import XyCenter from 'layouts/XyCenter';
+
+import Circle from 'components/Circle';
+import IconPublic from 'components/SvgIcon/IconPublic';
+import SingleLineText from 'components/SingleLineText';
 
 import './CtxMenu.css';
 

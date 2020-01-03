@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import isFunction from 'is-fn';
 
-import YGutter from '../YGutter';
+import YGutter from 'layouts/YGutter';
 
 const ExpandedBlockRadioGroup = ({
   selected,

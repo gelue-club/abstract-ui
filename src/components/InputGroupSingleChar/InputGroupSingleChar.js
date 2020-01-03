@@ -12,9 +12,10 @@ import join from 'lodash/join';
 import trim from 'lodash/trim';
 import split from 'lodash/split';
 
-import InputSingleChar from '../InputSingleChar';
-import IdenticalGrid from '../IdenticalGrid';
-import IGItem from '../IGItem';
+import InputSingleChar from 'components/InputSingleChar';
+
+import IdenticalGrid from 'layouts/IdenticalGrid';
+import IGItem from 'layouts/IGItem';
 
 import './InputGroupSingleChar.css';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import cn from 'classnames';
 
-import InlineXyCenter from '../InlineXyCenter';
+import InlineXyCenter from 'layouts/InlineXyCenter';
 
 import './ExpandedBlockRadioChoice.css';
 

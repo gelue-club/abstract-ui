@@ -1,11 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import ShrinkPanel from '../ShrinkPanel/ShrinkPanel';
-import CongruentGrid from '../CongruentGrid/CongruentGrid';
+import ShrinkPanel from 'components/ShrinkPanel';
+
+import CongruentGrid from 'layouts/CongruentGrid';
+
 import CtxMenu from './CtxMenu';
 
-storiesOf('<CtxMenu />', module)
+storiesOf('组件.<CtxMenu />', module)
   .add('右键按钮', () => <CtxMenu />)
   .add('使用网格组织的右键按钮', () => (
     <ShrinkPanel radius="6px" padding="15px" bgColor="#2D2F2F">

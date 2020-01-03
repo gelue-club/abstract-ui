@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Link from './Link';
 
 // 链接盒子
-storiesOf('<Link />', module)
+storiesOf('组件.<Link />', module)
   .add('文字内容', () => <Link to="https://qipao.app">关于</Link>)
   .add('块元素内容', () => (
     <Link to="https://qipao.app">

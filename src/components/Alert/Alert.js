@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import Box from '../Box';
-import SingleLineText from '../SingleLineText';
+import Box from 'layouts/Box';
+import SingleLineText from 'components/SingleLineText';
 
 import './Alert.css';
 

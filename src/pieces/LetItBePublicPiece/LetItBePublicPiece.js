@@ -8,19 +8,19 @@ import cn from 'classnames';
 import join from 'lodash/join';
 import isEmpty from 'lodash/isEmpty';
 
-import Box from '../Box';
-import Expanded2ColsLayout from '../Expanded2ColsLayout';
-import YGutter from '../YGutter';
-import SingleLineText from '../SingleLineText';
-import InlineXyCenter from '../InlineXyCenter';
-import XyCenter from '../XyCenter';
+import Box from 'layouts/Box';
+import Expanded2ColsLayout from 'layouts/Expanded2ColsLayout';
+import YGutter from 'layouts/YGutter';
+import InlineXyCenter from 'layouts/InlineXyCenter';
+import XyCenter from 'layouts/XyCenter';
+import RoundCornerExpandedMask from 'layouts/RoundCornerExpandedMask';
 
-import PieceWindow from '../PieceWindow';
-import RoundCornerExpandedMask from '../RoundCornerExpandedMask';
-import ExpandedBlockRadioGroup from '../ExpandedBlockRadioGroup';
-import ExpandedBlockRadioChoice from '../ExpandedBlockRadioChoice';
-import InputGroupSingleChar from '../InputGroupSingleChar';
-import TiledPanel from '../TiledPanel';
+import SingleLineText from 'components/SingleLineText';
+import PieceWindow from 'components/PieceWindow';
+import ExpandedBlockRadioGroup from 'components/ExpandedBlockRadioGroup';
+import ExpandedBlockRadioChoice from 'components/ExpandedBlockRadioChoice';
+import InputGroupSingleChar from 'components/InputGroupSingleChar';
+import TiledPanel from 'components/TiledPanel';
 
 import './LetItBePublicPiece.css';
 

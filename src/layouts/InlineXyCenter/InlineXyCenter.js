@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import TiledPanel from '../TiledPanel';
+import TiledPanel from 'components/TiledPanel';
 
 // 将内联元素居中在平铺面板中
 const InlineXyCenter = ({ className, children, ...restProps }) => (

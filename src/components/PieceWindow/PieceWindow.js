@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import merge from 'deepmerge';
 
-import RoundCornerShrinkMask from '../RoundCornerShrinkMask';
-import SingleLineText from '../SingleLineText';
-import Box from '../Box';
-import Circle from '../Circle';
+import RoundCornerShrinkMask from 'layouts/RoundCornerShrinkMask';
+import Box from 'layouts/Box';
+
+import SingleLineText from 'components/SingleLineText';
+import Circle from 'components/Circle';
 
 import './PieceWindow.css';
 

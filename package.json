@@ -74,6 +74,7 @@
     "@storybook/addon-storysource": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "babel-plugin-module-resolver": "^4.0.0",
     "prettier": "^1.19.1"
   },
   "private": false,
