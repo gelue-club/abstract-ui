@@ -8,7 +8,7 @@ import cn from 'classnames';
 import join from 'lodash/join';
 import isEmpty from 'lodash/isEmpty';
 
-import Box from 'layouts/Box';
+import Box from 'layouts/PaddingBox';
 import Expanded2ColsLayout from 'layouts/Expanded2ColsLayout';
 import YGutter from 'layouts/YGutter';
 import InlineXyCenter from 'layouts/InlineXyCenter';

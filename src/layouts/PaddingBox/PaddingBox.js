@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import merge from 'deepmerge';
 
-const Box = ({
+const PaddingBox = ({
   width = '100%',
   height = 'auto',
+
   padding = 0,
+
   children,
+
   className = '',
   style = {},
+
   ...restProps
 }) => (
   <div
-    className={cn('box', className)}
+    className={cn('padding-box', className)}
     style={merge(
       {
         boxSizing: 'border-box',
@@ -32,7 +36,7 @@ const Box = ({
   </div>
 );
 
-Box.propTypes = {
+PaddingBox.propTypes = {
   padding: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   children: PropTypes.oneOfType([
@@ -46,4 +50,4 @@ Box.propTypes = {
   style: PropTypes.object,
 };
 
-export default Box;
+export default PaddingBox;

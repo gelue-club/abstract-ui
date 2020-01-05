@@ -5,7 +5,7 @@ import cn from 'classnames';
 import merge from 'deepmerge';
 
 import RoundCornerShrinkMask from 'layouts/RoundCornerShrinkMask';
-import Box from 'layouts/Box';
+import Box from 'layouts/PaddingBox';
 
 import SingleLineText from 'kits/SingleLineText';
 
