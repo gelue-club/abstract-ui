@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import XyCenter from 'layouts/XyCenter';
 import Stack from 'layouts/Stack';
 
-import Circle from 'components/Circle';
+import Circle from 'kits/Circle';
 
 storiesOf('布局.<XyCenter />', module).add('圆点处的小圆', () => (
   <Stack size="250px">

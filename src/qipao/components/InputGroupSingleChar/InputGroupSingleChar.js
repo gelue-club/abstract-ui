@@ -86,30 +86,36 @@ function InputGroupSingleChar({
                     updateInputtingIndex,
                   })
                 }
-                onPaste ={(e) => handlePaste({
-                  e,
-                  charCount,
-                  updateCachedError,
-                  updateInputtingIndex,
-                  updateProcessStatus,
-                  then,
-                })}
-                afterChange={({ e, value, nextIndex }) => handleChange({
-                  e,
-                  value,
-                  nextIndex,
-                  index,
-                  charCount,
-                  updateCachedError,
-                  updateInputtingIndex,
-                  updateProcessStatus,
-                  then,
-                })}
+                onPaste={e =>
+                  handlePaste({
+                    e,
+                    charCount,
+                    updateCachedError,
+                    updateInputtingIndex,
+                    updateProcessStatus,
+                    then,
+                  })
+                }
+                afterChange={({ e, value, nextIndex }) =>
+                  handleChange({
+                    e,
+                    value,
+                    nextIndex,
+                    index,
+                    charCount,
+                    updateCachedError,
+                    updateInputtingIndex,
+                    updateProcessStatus,
+                    then,
+                  })
+                }
               />
             </IGItem>
           ))}
         </IdenticalGrid>
-      ) : LoaderRender({ gap, charCount, width })}
+      ) : (
+        LoaderRender({ gap, charCount, width })
+      )}
     </div>
   );
 }
@@ -122,14 +128,10 @@ function handlePaste({
   updateProcessStatus,
   then,
 }) {
-  const copied = split(
-    e.clipboardData.getData('text/plain'),
-    '',
-  );
+  const copied = split(e.clipboardData.getData('text/plain'), '');
 
-  cachedValue = times(
-    charCount,
-    (idx) => isEmpty(copied[idx]) ? [''] : [copied[idx]],
+  cachedValue = times(charCount, idx =>
+    isEmpty(copied[idx]) ? [''] : [copied[idx]],
   );
 
   validate({

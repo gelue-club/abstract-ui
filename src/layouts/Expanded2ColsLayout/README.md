@@ -12,11 +12,11 @@
 
 ## 属性
 
-| 属性          | 必须 | 描述       | 类型     |
-| ------------- | ---- | ---------- | -------- |
-| children      |      | 左、右列内容  | object   |
-| className     |      | className  | String   |
-| split         |      | 分割点      | Number   |
+| 属性      | 必须 | 描述         | 类型   |
+| --------- | ---- | ------------ | ------ |
+| children  |      | 左、右列内容 | object |
+| className |      | className    | String |
+| split     |      | 分割点       | Number |
 
 ## 示例
 

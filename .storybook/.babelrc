@@ -7,13 +7,13 @@
           "."
         ],
         "alias": {
-          "root": ".",
-          "src": "./src",
-          "components": "./src/components",
+          "kits": "./src/kits",
           "layouts": "./src/layouts",
-          "pieces": "./src/pieces",
           "utilities": "./src/utilities",
-          "shared": "./src/shared"
+          "shared": "./src/shared",
+
+          "components": "./src/qipao/components",
+          "pieces": "./src/qipao/pieces"
         },
         "cwd": "babelrc"
       }

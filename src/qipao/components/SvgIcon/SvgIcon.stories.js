@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Circle from 'components/Circle';
+import Circle from 'kits/Circle';
 import XyCenter from 'layouts/XyCenter';
 
 import IconPublic from './IconPublic';

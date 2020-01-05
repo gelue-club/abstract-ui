@@ -7,8 +7,9 @@ import merge from 'deepmerge';
 import RoundCornerShrinkMask from 'layouts/RoundCornerShrinkMask';
 import Box from 'layouts/Box';
 
-import SingleLineText from 'components/SingleLineText';
-import Circle from 'components/Circle';
+import SingleLineText from 'kits/SingleLineText';
+
+import Circle from 'kits/Circle';
 
 import './PieceWindow.css';
 

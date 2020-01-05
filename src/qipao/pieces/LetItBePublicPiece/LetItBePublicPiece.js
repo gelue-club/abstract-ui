@@ -15,7 +15,7 @@ import InlineXyCenter from 'layouts/InlineXyCenter';
 import XyCenter from 'layouts/XyCenter';
 import RoundCornerExpandedMask from 'layouts/RoundCornerExpandedMask';
 
-import SingleLineText from 'components/SingleLineText';
+import SingleLineText from 'kits/SingleLineText';
 import PieceWindow from 'components/PieceWindow';
 import ExpandedBlockRadioGroup from 'components/ExpandedBlockRadioGroup';
 import ExpandedBlockRadioChoice from 'components/ExpandedBlockRadioChoice';

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Stack from 'layouts/Stack';
-import Circle from 'components/Circle';
+import Circle from 'kits/Circle';
 
 storiesOf('布局.<Stack />', module).add('两层圆', () => (
   <>

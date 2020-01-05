@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import Box from 'layouts/Box';
-import SingleLineText from 'components/SingleLineText';
+
+import SingleLineText from 'kits/SingleLineText';
 
 import './Alert.css';
 
-const Alert = ({ children, className = '', ...restProps }) => (
+const Alert = ({
+  children,
+  padding = '16px 16px',
+  className = '',
+  ...restProps
+}) => (
   <div className={cn('alert', className)} {...restProps}>
-    <Box padding="16px 16px">
+    <Box padding={padding}>
       <SingleLineText size="16px">{children}</SingleLineText>
     </Box>
   </div>

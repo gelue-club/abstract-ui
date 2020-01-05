@@ -48,7 +48,7 @@ function InputSingleChar({
           }
         }
       }}
-      onPaste={(e) => {
+      onPaste={e => {
         if (size(e.clipboardData.getData('text/plain')) > 1) {
           onPaste(e);
           return;
@@ -73,10 +73,7 @@ function InputSingleChar({
 }
 
 InputSingleChar.propTypes = {
-  defaultValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   afterChange: PropTypes.func,
   onDelete: PropTypes.func,
   onPaste: PropTypes.func,

@@ -4,9 +4,10 @@ import cn from 'classnames';
 import Stack from 'layouts/Stack';
 import XyCenter from 'layouts/XyCenter';
 
-import Circle from 'components/Circle';
+import SingleLineText from 'kits/SingleLineText';
+
+import Circle from 'kits/Circle';
 import IconPublic from 'components/SvgIcon/IconPublic';
-import SingleLineText from 'components/SingleLineText';
 
 import './CtxMenu.css';
 
