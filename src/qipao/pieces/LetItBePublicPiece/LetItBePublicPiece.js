@@ -29,12 +29,11 @@ const LetItBePublicPiece = ({
   index,
 
   defaultPosition = { x: 0, y: 0 },
+
   collectionIndex,
-  code = '',
-
   collections,
-
   host = '',
+  code = '',
 
   closePieceLetItBePublic,
   updateCollectionVisibleType,
