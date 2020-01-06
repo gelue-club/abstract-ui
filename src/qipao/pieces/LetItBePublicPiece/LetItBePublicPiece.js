@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
 
-import Qrcode from 'qrcode.react';
-import Draggable from 'react-draggable';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Draggable from 'react-draggable';
+import Qrcode from 'qrcode.react';
 import cn from 'classnames';
 
 import join from 'lodash/join';
 import isEmpty from 'lodash/isEmpty';
 
-import PaddingBox from 'layouts/PaddingBox';
-import Expanded2ColsLayout from 'layouts/Expanded2ColsLayout';
-import YGutter from 'layouts/YGutter';
-import InlineXyCenter from 'layouts/InlineXyCenter';
-import XyCenter from 'layouts/XyCenter';
-import RoundCornerExpandedMask from 'components/RoundCornerExpandedMask';
-
 import SingleLineText from 'kits/SingleLineText';
-import PieceWindow from 'components/PieceWindow';
-import ExpandedBlockRadioGroup from 'components/ExpandedBlockRadioGroup';
+
+import Expanded2ColsLayout from 'layouts/Expanded2ColsLayout';
+import InlineXyCenter from 'layouts/InlineXyCenter';
+import PaddingBox from 'layouts/PaddingBox';
+import XyCenter from 'layouts/XyCenter';
+import YGutter from 'layouts/YGutter';
+
 import ExpandedBlockRadioChoice from 'components/ExpandedBlockRadioChoice';
+import RoundCornerExpandedMask from 'components/RoundCornerExpandedMask';
+import ExpandedBlockRadioGroup from 'components/ExpandedBlockRadioGroup';
 import InputGroupSingleChar from 'components/InputGroupSingleChar';
+import PieceWindow from 'components/PieceWindow';
 import TiledPanel from 'components/TiledPanel';
 
 import './LetItBePublicPiece.css';
 
 const LetItBePublicPiece = ({
   index,
+
   defaultPosition = { x: 0, y: 0 },
   collectionIndex,
   code = '',
