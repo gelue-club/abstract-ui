@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import merge from 'deepmerge';
 
-import RoundCornerShrinkMask from 'layouts/RoundCornerShrinkMask';
-import Box from 'layouts/PaddingBox';
+import RoundCornerShrinkMask from 'components/RoundCornerShrinkMask';
+import PaddingBox from 'layouts/PaddingBox';
 
 import SingleLineText from 'kits/SingleLineText';
 
@@ -28,7 +28,7 @@ const PieceWindow = ({
     className={cn('unselectable piece-window', className)}
     {...restProps}
   >
-    <Box
+    <PaddingBox
       padding="29px 0 0 0"
       style={merge(
         {
@@ -45,7 +45,7 @@ const PieceWindow = ({
       <Circle size="14px" className="btn-close-piece" onClick={onClose} />
 
       {children}
-    </Box>
+    </PaddingBox>
   </RoundCornerShrinkMask>
 );
 
