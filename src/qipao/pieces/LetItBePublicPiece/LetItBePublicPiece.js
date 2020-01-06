@@ -8,12 +8,12 @@ import cn from 'classnames';
 import join from 'lodash/join';
 import isEmpty from 'lodash/isEmpty';
 
-import Box from 'layouts/PaddingBox';
+import PaddingBox from 'layouts/PaddingBox';
 import Expanded2ColsLayout from 'layouts/Expanded2ColsLayout';
 import YGutter from 'layouts/YGutter';
 import InlineXyCenter from 'layouts/InlineXyCenter';
 import XyCenter from 'layouts/XyCenter';
-import RoundCornerExpandedMask from 'layouts/RoundCornerExpandedMask';
+import RoundCornerExpandedMask from 'components/RoundCornerExpandedMask';
 
 import SingleLineText from 'kits/SingleLineText';
 import PieceWindow from 'components/PieceWindow';
@@ -26,11 +26,16 @@ import './LetItBePublicPiece.css';
 
 const LetItBePublicPiece = ({
   index,
-  title,
-  publicUrl,
-  sharedState,
   defaultPosition = { x: 0, y: 0 },
+  collectionIndex,
   code = '',
+
+  collections,
+
+  host = '',
+
+  closePieceLetItBePublic,
+  updateCollectionVisibleType,
 }) => {
   const [
     accessCodeSetupPanelVisible,
@@ -38,7 +43,9 @@ const LetItBePublicPiece = ({
   ] = useState(false);
 
   const [accessCode, updateAccessCode] = useState(code);
-  const [$sharedState, updateSharedState] = useState(sharedState);
+  const [sharedStateUI, updateSharedStateUI] = useState(
+    collections[collectionIndex].visibleType,
+  );
 
   return (
     <Draggable handle=".piece-name">
@@ -47,16 +54,18 @@ const LetItBePublicPiece = ({
           width: '280px',
           height: '494px',
           position: 'absolute',
-          zIndex: 20000,
+          zIndex: 10000,
           top: defaultPosition.y,
           left: defaultPosition.x,
         }}
       >
         <PieceWindow
           w="280px"
-          name={title}
+          name={collections[collectionIndex].title}
           className="let-it-be-public-piece"
-          onClose={() => {}}
+          onClose={() => {
+            closePieceLetItBePublic(index);
+          }}
         >
           <div
             className={cn('setup-access-code', {
@@ -77,8 +86,12 @@ const LetItBePublicPiece = ({
                 width={164}
                 gap={8}
                 then={({ value, actions: { reset } }) => {
-                  updateSharedState('public-with-password');
+                  updateCollectionVisibleType({
+                    pivot: collectionIndex,
+                    visibleType: 'public-with-password',
+                  });
 
+                  updateSharedStateUI('public-with-password');
                   updateAccessCode(join(value, ''));
                   toggleAccessCodeSetupPanelVisible(false);
 
@@ -93,7 +106,7 @@ const LetItBePublicPiece = ({
           </div>
 
           <YGutter height="25px" />
-          <Box padding="0 30px">
+          <PaddingBox padding="0 30px">
             <div
               className="clearfix qrcode"
               style={{
@@ -111,47 +124,72 @@ const LetItBePublicPiece = ({
                   level="H"
                   renderAs="svg"
                   size={220 - 15 * 2}
-                  value={publicUrl}
+                  value={getPublicUrl({
+                    host,
+                    userId: collections[collectionIndex].userId,
+                    collectionId: collections[collectionIndex].collectionId,
+                  })}
                 />
               </XyCenter>
             </div>
-          </Box>
+          </PaddingBox>
 
           <YGutter height="15px" />
-          <Box padding="0 30px">
+          <PaddingBox padding="0 30px">
             <RoundCornerExpandedMask radius="3px">
               <Expanded2ColsLayout split={0.65}>
                 <div className="unselectable public-url">
-                  <Box padding="0 11px" className="y-center">
-                    <SingleLineText size="12px">{publicUrl}</SingleLineText>
-                  </Box>
+                  <PaddingBox padding="0 11px" className="y-center">
+                    <SingleLineText size="12px">
+                      {getPublicUrl({
+                        host,
+                        userId: collections[collectionIndex].userId,
+                        collectionId: collections[collectionIndex].collectionId,
+                      })}
+                    </SingleLineText>
+                  </PaddingBox>
                 </div>
 
-                <CopyToClipboard text={publicUrl}>
+                <CopyToClipboard
+                  text={getPublicUrl({
+                    host,
+                    userId: collections[collectionIndex].userId,
+                    collectionId: collections[collectionIndex].collectionId,
+                  })}
+                >
                   <div className="unselectable btn-copy">
                     <InlineXyCenter>复制链接</InlineXyCenter>
                   </div>
                 </CopyToClipboard>
               </Expanded2ColsLayout>
             </RoundCornerExpandedMask>
-          </Box>
+          </PaddingBox>
 
           <YGutter height="25px" />
-          <Box padding="0 30px">
+          <PaddingBox padding="0 30px">
             <span className="col-access-permission">当前访问权限</span>
-          </Box>
+          </PaddingBox>
 
           <YGutter height="5px" />
-          <Box padding="0 30px">
-            <ExpandedBlockRadioGroup selected={$sharedState}>
+          <PaddingBox padding="0 30px">
+            <ExpandedBlockRadioGroup selected={sharedStateUI}>
               <ExpandedBlockRadioChoice
                 value="private"
                 onClick={() => {
-                  if ($sharedState === 'public-with-password') {
+                  if (sharedStateUI === 'public-with-password') {
                     updateAccessCode('');
                   }
 
-                  updateSharedState('private');
+                  updateCollectionVisibleType({
+                    pivot: collectionIndex,
+                    collectionId: collections[collectionIndex].collectionId,
+                    modificationDetails: {
+                      visibleType: 'private',
+                    },
+                    cb: () => {
+                      updateSharedStateUI('private');
+                    },
+                  });
                 }}
               >
                 私密
@@ -160,11 +198,20 @@ const LetItBePublicPiece = ({
               <ExpandedBlockRadioChoice
                 value="public"
                 onClick={() => {
-                  if ($sharedState === 'public-with-password') {
+                  if (sharedStateUI === 'public-with-password') {
                     updateAccessCode('');
                   }
 
-                  updateSharedState('public');
+                  updateCollectionVisibleType({
+                    pivot: collectionIndex,
+                    collectionId: collections[collectionIndex].collectionId,
+                    modificationDetails: {
+                      visibleType: 'public',
+                    },
+                    cb: () => {
+                      updateSharedStateUI('public');
+                    },
+                  });
                 }}
               >
                 公开
@@ -173,13 +220,13 @@ const LetItBePublicPiece = ({
               <ExpandedBlockRadioChoice
                 value="public-with-password"
                 onClick={() => {
-                  toggleAccessCodeSetupPanelVisible(true);
+                  // toggleAccessCodeSetupPanelVisible(true);
                 }}
               >
                 {`访问码${!isEmpty(accessCode) ? `：${accessCode}` : ''}`}
               </ExpandedBlockRadioChoice>
             </ExpandedBlockRadioGroup>
-          </Box>
+          </PaddingBox>
 
           <YGutter height="30px" />
         </PieceWindow>
@@ -187,5 +234,9 @@ const LetItBePublicPiece = ({
     </Draggable>
   );
 };
+
+function getPublicUrl({ host, userId, collectionId }) {
+  return `${host}/collection/${userId}/${collectionId}`;
+}
 
 export default LetItBePublicPiece;
