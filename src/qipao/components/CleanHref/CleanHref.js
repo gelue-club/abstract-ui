@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import './Link.css';
+import merge from 'utilities/merge';
+import parse2dSizeProp from 'utilities/parse2dSizeProp';
+
+import './CleanHref.css';
 
 /**
- * 链接盒子
+ * 无下划线的链接盒子
  *
  * 允许的内容,
  * - 文字
@@ -16,15 +19,33 @@ import './Link.css';
  *
  * 若放的是文字，文字无下划线
  */
-function Link({ to, children, className, ...restProps }) {
+function CleanHref({
+  to = '',
+  size = 'auto',
+  children,
+  className = '',
+  style = {},
+  ...restProps
+}) {
   return (
-    <a className={cn('clean-link link', className)} href={to} {...restProps}>
+    <a
+      className={cn('clean-href', className)}
+      href={to}
+      style={merge(
+        parse2dSizeProp({
+          size,
+          placeholder: { width: 'auto', height: 'auto' },
+        }),
+        style,
+      )}
+      {...restProps}
+    >
       {children}
     </a>
   );
 }
 
-Link.propTypes = {
+CleanHref.propTypes = {
   to: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -35,4 +56,4 @@ Link.propTypes = {
   style: PropTypes.object,
 };
 
-export default Link;
+export default CleanHref;

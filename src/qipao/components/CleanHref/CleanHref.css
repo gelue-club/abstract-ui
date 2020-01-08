@@ -1,0 +1,7 @@
+.clean-href,
+.clean-href:hover,
+.clean-href:focus,
+.clean-href:active {
+  display: inline-block;
+  text-decoration: none;
+}
