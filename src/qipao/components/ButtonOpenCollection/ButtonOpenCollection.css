@@ -1,0 +1,30 @@
+.btn-open-collection {
+  position: relative;
+  color: #9b9b9b;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #262829 !important;
+  background: #262829;
+}
+
+.btn-open-collection:hover {
+  border: 1px solid #ea514e !important;
+}
+
+.clcn-logo {
+  overflow: hidden;
+  border-radius: 8px;
+  right: -33px;
+}
+
+.clcn-updated-notifier {
+  left: -14px;
+  background: #ea514e;
+}

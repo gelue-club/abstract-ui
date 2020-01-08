@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import merge from 'deepmerge';
 
-function Circle({ size, children, className = '', style, ...restProps }) {
+import merge from 'utilities/merge';
+
+function Circle({ size = '', children, className = '', style, ...restProps }) {
   return (
     <div
       className={cn('circle', className)}
@@ -22,12 +23,6 @@ function Circle({ size, children, className = '', style, ...restProps }) {
 
 Circle.propTypes = {
   size: PropTypes.string.isRequired,
-
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.object,
-  ]),
 
   className: PropTypes.string,
   style: PropTypes.object,
