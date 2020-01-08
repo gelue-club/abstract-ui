@@ -34,7 +34,8 @@
     "extends": "react-app",
     "rules": {
       "react-hooks/exhaustive-deps": 0,
-      "jsx-a11y/alt-text": 0
+      "jsx-a11y/alt-text": 0,
+      "no-empty-pattern": 0
     }
   },
   "browserslist": {

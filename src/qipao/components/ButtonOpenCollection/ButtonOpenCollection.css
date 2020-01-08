@@ -18,6 +18,12 @@
   border: 1px solid #ea514e !important;
 }
 
+.btn-open-collection.highlight {
+  color: #fff;
+  border: 1px solid #ea514e !important;
+  background: #ea514e;
+}
+
 .clcn-logo {
   overflow: hidden;
   border-radius: 8px;

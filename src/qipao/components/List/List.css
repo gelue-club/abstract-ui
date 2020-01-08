@@ -1,0 +1,23 @@
+.list {
+  position: absolute;
+  top: 0;
+  width: 337px !important;
+  height: 100%;
+  background: #1b1c1c;
+}
+
+.list-row {
+  border-bottom: 8px solid transparent;
+}
+
+.list-row:first-child {
+  border-top: 18px solid transparent;
+}
+
+.list-row:last-child {
+  border-bottom: 18px solid transparent;
+}
+
+.simplebar-scrollbar:before {
+  background: red !important;
+}

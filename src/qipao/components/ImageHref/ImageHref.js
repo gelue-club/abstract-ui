@@ -5,7 +5,7 @@ import Image from 'kits/Image';
 import CleanHref from 'components/CleanHref';
 import parse2dSizeProp from 'utilities/parse2dSizeProp';
 
-const ImageHref = ({ to='', src='', size = 'auto', className='' }) => {
+const ImageHref = ({ to = '', src = '', size = 'auto', className = '' }) => {
   const { width, height } = parse2dSizeProp({
     size,
     placeholder: { width: 'auto', height: 'auto' },
