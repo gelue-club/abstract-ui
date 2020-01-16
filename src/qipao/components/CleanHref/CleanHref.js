@@ -47,11 +47,6 @@ function CleanHref({
 
 CleanHref.propTypes = {
   to: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.object,
-  ]),
   className: PropTypes.string,
   style: PropTypes.object,
 };

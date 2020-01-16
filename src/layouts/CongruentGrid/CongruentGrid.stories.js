@@ -7,7 +7,7 @@ import DiyCell from './DiyCell';
 const styleFill = { width: '100%', height: '100%' };
 const demoEle = () => <div className="bg-test" style={styleFill} />;
 
-storiesOf('布局.<CongruentGrid />', module)
+storiesOf('布局/全等网格', module)
   .add('平铺', () => (
     <CongruentGrid width="100%" rowHeight="112px" columnWidth="33.333333%">
       {demoEle()}

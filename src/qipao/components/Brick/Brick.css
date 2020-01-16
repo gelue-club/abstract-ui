@@ -1,0 +1,83 @@
+.brick {
+  width: 100% !important;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #262829;
+}
+
+/* 完整 */
+.brick.has-cover.has-title.has-description {
+  padding-bottom: 18px;
+}
+
+.brick.has-cover.has-title.has-description .brick-title {
+  border-top: 18px solid transparent;
+}
+
+.brick.has-cover.has-title.has-description .brick-description {
+  border-top: 10px solid transparent;
+}
+
+/* 无标题 */
+.brick.has-cover.no-title.has-description {
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+
+.brick.has-cover.no-title.has-description .brick-description {
+  border-top: 18px solid transparent;
+}
+
+/* 无封面 */
+.brick.no-cover.has-title.has-description {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.brick.no-cover.has-title.has-description .brick-description {
+  border-top: 10px solid transparent;
+}
+
+/* 无描述 */
+.brick.has-cover.has-title.no-description {
+  padding-bottom: 18px;
+}
+
+.brick.has-cover.has-title.no-description .brick-title {
+  border-top: 18px solid transparent;
+}
+
+/* 只有标题 / 只有描述 */
+
+.brick.no-cover.has-title.no-description,
+.brick.no-cover.no-title.has-description {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* 只有封面 */
+
+.brick.has-cover.no-title.no-description {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brick-demo {
+  width: 256px !important;
+}

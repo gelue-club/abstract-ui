@@ -10,7 +10,7 @@ import CongruentGrid from 'layouts/CongruentGrid';
 
 import RoundCornerShrinkMask from './RoundCornerShrinkMask';
 
-storiesOf('布局.<RoundCornerShrinkMask />', module).add('右键按钮', () => (
+storiesOf('布局/圆角收缩遮罩', module).add('默认', () => (
   <RoundCornerShrinkMask radius="6px">
     <SimpleBar style={{ maxHeight: 384, width: 240 }}>
       <ShrinkPanel radius="6px" padding="15px" bgColor="#2D2F2F">

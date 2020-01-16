@@ -5,7 +5,7 @@ import ImageHref from './ImageHref';
 
 import './ImageHref.stories.css';
 
-storiesOf('组件.<ImageHref />', module).add('图片', () => (
+storiesOf('组件/图片链接', module).add('图片', () => (
   <ImageHref
     src="https://picsum.photos/200"
     to="https://qipao.app"

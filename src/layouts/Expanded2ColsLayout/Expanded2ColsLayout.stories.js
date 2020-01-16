@@ -5,8 +5,8 @@ import { storiesOf } from '@storybook/react';
 
 import Expanded2ColsLayout from './Expanded2ColsLayout';
 
-storiesOf('布局.<Expanded2ColsLayout />', module).add(
-  'X 轴平铺两列布局',
+storiesOf('布局/X轴平铺两列布局', module).add(
+  '默认',
   () => (
     <Expanded2ColsLayout
       split={0.68}

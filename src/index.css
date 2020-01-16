@@ -71,7 +71,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden !important;
   font: 200 normal 62.5%/normal -apple-system, 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
 }
 

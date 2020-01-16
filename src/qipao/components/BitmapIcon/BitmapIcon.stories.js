@@ -9,7 +9,7 @@ import BitmapIcon from './BitmapIcon';
 import icon from './icon.png';
 import icon2x from './icon@2x.png';
 
-storiesOf('组件.<BitmapIcon />', module).add('位图图标', () => (
+storiesOf('组件/位图图标', module).add('默认', () => (
   <Box>
     <BitmapIcon size="28px 22px" src={icon} xsrc={icon2x} />
   </Box>

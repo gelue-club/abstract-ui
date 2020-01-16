@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Stack from 'layouts/Stack';
 import Circle from 'kits/Circle';
 
-storiesOf('布局.<Stack />', module).add('两层圆', () => (
+storiesOf('布局/层叠', module).add('两层圆', () => (
   <>
     <Circle size="250px" className="left bg-test" />
     <Circle size="250px" className="left bg-test-2" />

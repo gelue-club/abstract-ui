@@ -11,7 +11,7 @@ import List from 'components/List';
 
 import './List.css';
 
-storiesOf('组件.<List />', module).add('列表', () => (
+storiesOf('组件/列表', module).add('清单列表', () => (
   <>
     <List
       className="list-demo"

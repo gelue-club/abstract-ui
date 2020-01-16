@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 
 import LetItBePublicPiece from './LetItBePublicPiece';
 
-storiesOf('小零件.<LetItBePublicPiece />', module).add(
-  '小零件 - 公开它',
+storiesOf('小零件/分享', module).add(
+  '默认',
   () => (
     <LetItBePublicPiece
       index={1}

@@ -66,17 +66,18 @@
     "react-draggable": "^4.2.0",
     "react-responsive": "^8.0.1",
     "react-scripts": "3.3.0",
-    "react-sizeme": "^2.6.10",
+    "react-sizeme": "^2.6.12",
     "simplebar-react": "^2.1.0",
     "use-force-update": "^1.0.7"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-knobs": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addon-storysource": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/react": "^5.2.8",
+    "@storybook/addon-actions": "^5.3.4",
+    "@storybook/addon-knobs": "^5.3.4",
+    "@storybook/addon-links": "^5.3.4",
+    "@storybook/addon-storysource": "^5.3.4",
+    "@storybook/addons": "^5.3.4",
+    "@storybook/preset-create-react-app": "^1.5.1",
+    "@storybook/react": "^5.3.4",
     "babel-plugin-module-resolver": "^4.0.0",
     "prettier": "^1.19.1"
   },
@@ -87,11 +88,11 @@
     "url": "https://github.com/iTonyYo"
   },
   "repository": {
-    "url": "git@github.com:gelue-club/abstract-ui.git",
+    "url": "git@github.com:iTonyYo/abstract-ui.git",
     "type": "git"
   },
-  "homepage": "https://github.com/gelue-club/abstract-ui",
-  "bugs": "https://github.com/gelue-club/abstract-ui/issues",
+  "homepage": "https://github.com/iTonyYo/abstract-ui",
+  "bugs": "https://github.com/iTonyYo/abstract-ui/issues",
   "publishConfig": {
     "access": "public"
   },

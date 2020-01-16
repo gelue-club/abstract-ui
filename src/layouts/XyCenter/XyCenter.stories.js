@@ -6,7 +6,7 @@ import Stack from 'layouts/Stack';
 
 import Circle from 'kits/Circle';
 
-storiesOf('布局.<XyCenter />', module).add('圆点处的小圆', () => (
+storiesOf('布局/水平、垂直居中', module).add('圆点处的小圆', () => (
   <Stack size="250px">
     <Circle size="250px" className="bg-test" />
 

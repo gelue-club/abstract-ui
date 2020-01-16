@@ -1,0 +1,5 @@
+.masonry {
+  position: relative;
+  z-index: 150;
+  margin: 0 auto;
+}

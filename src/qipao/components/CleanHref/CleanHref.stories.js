@@ -5,7 +5,7 @@ import CleanHref from './CleanHref';
 import Image from 'kits/Image';
 
 // 无下划线的链接盒子
-storiesOf('组件.<CleanHref />', module)
+storiesOf('组件/无痕迹的链接', module)
   .add('文字内容', () => <CleanHref to="https://qipao.app">关于</CleanHref>)
   .add('块元素内容', () => (
     <CleanHref to="https://qipao.app">

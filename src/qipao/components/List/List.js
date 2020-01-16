@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, createRef, useEffect } from 'react';
 
 import PropTypes from 'prop-types';

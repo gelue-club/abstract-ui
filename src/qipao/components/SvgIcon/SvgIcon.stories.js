@@ -6,7 +6,7 @@ import XyCenter from 'layouts/XyCenter';
 
 import IconPublic from './IconPublic';
 
-storiesOf('组件.<SvgIcon />', module).add('公开', () => (
+storiesOf('组件/矢量图标', module).add('公开', () => (
   <Box>
     <IconPublic />
   </Box>
