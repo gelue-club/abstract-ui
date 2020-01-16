@@ -1,5 +1,29 @@
 /* eslint-disable */
 
+/**
+ * 堆砌布局，
+ *
+ * - [X] 给定数据
+ *
+ * - [X] 动态测量砖的高度
+ *
+ * - [X] 给定行间距
+ *
+ * - [ ] 第一行有上间距，最后一行有下间距
+ *
+ * - [ ] `卸载` 后再渲染时，记住上次滚动位置
+ *
+ * - [ ] 删（逐个）
+ *
+ * - [ ] 增（从顶部增加）
+ *
+ * - [ ] 增（从末尾增加）
+ *
+ * - [X] 在 CSR 项目下使用
+ *
+ * - [X] 在 Next.js 框架下使用
+ */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
@@ -151,9 +175,12 @@ class Masonry extends Component {
   calculateColumnCounts = () => {
     const parentWidth = this.width;
 
-    const { maxColumns, gap, columnWidth } = this.props;
+    const { maxColumns, gap, columnWidth, columnCount } = this.props;
 
-    this.columnCount = floor((parentWidth + gap) / (columnWidth + gap));
+    this.columnCount =
+      columnCount ?
+        columnCount :
+        floor((parentWidth + gap) / (columnWidth + gap));
 
     if (maxColumns && this.columnCount > maxColumns) {
       this.columnCount = maxColumns;
@@ -256,12 +283,9 @@ class Masonry extends Component {
     identity: '',
 
     maxColumns: 0,
-    cellCount: 0,
 
     children: () => {},
 
-    initialWidth: 0,
-    columnWidth: 0,
     gap: 0,
   };
 
@@ -270,6 +294,7 @@ class Masonry extends Component {
 
     identity: PropTypes.string,
 
+    columnCount: PropTypes.number.isRequired,
     maxColumns: PropTypes.number,
     cellCount: PropTypes.number.isRequired,
 
