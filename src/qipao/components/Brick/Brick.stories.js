@@ -5,6 +5,7 @@ import Brick from './Brick';
 import collections from './collections';
 
 import './Brick.css';
+import './Demo.css';
 
 storiesOf('组件/砖块', module)
   .add('完整', () => (

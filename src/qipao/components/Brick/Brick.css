@@ -3,7 +3,19 @@
   box-sizing: border-box;
   border-radius: 10px;
   overflow: hidden;
-  background: #262829;
+  background: #161818;
+}
+
+.brick:hover {
+  background: #444646;
+}
+
+.brick:hover .brick-title {
+  color: #fff;
+}
+
+.brick:hover .brick-description {
+  color: #D0D0D0;
 }
 
 /* 完整 */
