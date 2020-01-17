@@ -32,8 +32,6 @@ function RoundCornerShrinkMask({
 RoundCornerShrinkMask.propTypes = {
   radius: PropTypes.string.isRequired,
 
-  children: PropTypes.oneOfType([PropTypes.object]).isRequired,
-
   className: PropTypes.string,
   style: PropTypes.object,
 };

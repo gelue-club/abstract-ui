@@ -13,11 +13,7 @@ function Measure({ children, onMeasure = () => {}, className, ...restProps }) {
   });
 
   return (
-    <div
-      ref={measurerRef}
-      className={cn('measure', className)}
-      {...restProps}
-    >
+    <div ref={measurerRef} className={cn('measure', className)} {...restProps}>
       {children}
     </div>
   );

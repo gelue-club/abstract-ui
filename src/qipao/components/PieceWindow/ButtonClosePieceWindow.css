@@ -1,0 +1,25 @@
+.btn-close-piece-window {
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-close-piece-window .icon {
+  visibility: hidden;
+}
+
+.btn-close-piece-window .circle {
+  position: relative;
+}
+
+.btn-close-piece-window:hover .circle {
+  background: #EA514E;
+}
+
+.btn-close-piece-window:hover .icon {
+  visibility: visible;
+}

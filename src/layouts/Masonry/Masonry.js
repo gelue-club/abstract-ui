@@ -139,7 +139,7 @@ class Masonry extends Component {
     return masonryWidth;
   };
 
-  getMin = (cols) => {
+  getMin = cols => {
     let min = cols[0];
 
     for (const col of cols) {
@@ -151,7 +151,7 @@ class Masonry extends Component {
     return min;
   };
 
-  getMax = (cols) => {
+  getMax = cols => {
     let max = cols[0];
 
     for (const col of cols) {
@@ -177,10 +177,9 @@ class Masonry extends Component {
 
     const { maxColumns, gap, columnWidth, columnCount } = this.props;
 
-    this.columnCount =
-      columnCount ?
-        columnCount :
-        floor((parentWidth + gap) / (columnWidth + gap));
+    this.columnCount = columnCount
+      ? columnCount
+      : floor((parentWidth + gap) / (columnWidth + gap));
 
     if (maxColumns && this.columnCount > maxColumns) {
       this.columnCount = maxColumns;
@@ -307,7 +306,7 @@ class Masonry extends Component {
   };
 
   // debug('HUSO_DWA:Masonry')
-  log = (message) => {
+  log = message => {
     console.log(message);
   };
 }

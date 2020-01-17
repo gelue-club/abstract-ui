@@ -43,10 +43,7 @@ storiesOf('布局/瀑布流', module).add('默认', () => (
         className="clearfix cell"
         style={style}
       >
-        <Brick
-          data={collections[cellIndex]}
-          className="left"
-        />
+        <Brick data={collections[cellIndex]} className="left" />
       </Measure>
     )}
   </Masonry>

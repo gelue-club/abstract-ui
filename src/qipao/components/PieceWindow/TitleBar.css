@@ -1,0 +1,22 @@
+.title-bar {
+  cursor: move;
+  width: 100%;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.title-bar:hover .circle {
+  background: #444646;
+}
+
+.title-bar .piece-name {
+  width: 100%;
+
+  color: #A1A2A2;
+  text-align: center;
+
+  padding: 6.5px 0;
+
+  box-shadow: 0 0.5px 0 #444646;
+}

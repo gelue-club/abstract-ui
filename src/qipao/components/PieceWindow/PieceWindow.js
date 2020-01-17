@@ -7,9 +7,7 @@ import merge from 'deepmerge';
 import RoundCornerShrinkMask from 'components/RoundCornerShrinkMask';
 import PaddingBox from 'layouts/PaddingBox';
 
-import SingleLineText from 'kits/SingleLineText';
-
-import Circle from 'kits/Circle';
+import TitleBar from './TitleBar';
 
 import './PieceWindow.css';
 
@@ -18,9 +16,12 @@ const PieceWindow = ({
   h,
   name,
   children,
+
+  onClose = () => {},
+
   className = '',
   style = {},
-  onClose = () => {},
+
   ...restProps
 }) => (
   <RoundCornerShrinkMask
@@ -29,7 +30,7 @@ const PieceWindow = ({
     {...restProps}
   >
     <PaddingBox
-      padding="29px 0 0 0"
+      padding="30px 0 0 0"
       style={merge(
         {
           width: w,
@@ -38,11 +39,7 @@ const PieceWindow = ({
         style,
       )}
     >
-      <SingleLineText size="12px" className="piece-name">
-        {name}
-      </SingleLineText>
-
-      <Circle size="14px" className="btn-close-piece" onClick={onClose} />
+      <TitleBar onClick={onClose}>{name}</TitleBar>
 
       {children}
     </PaddingBox>
