@@ -293,7 +293,7 @@ class Masonry extends Component {
 
     identity: PropTypes.string,
 
-    columnCount: PropTypes.number.isRequired,
+    columnCount: PropTypes.number,
     maxColumns: PropTypes.number,
     cellCount: PropTypes.number.isRequired,
 
