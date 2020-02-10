@@ -10,15 +10,17 @@ import parse2dSizeProp from 'utilities/parse2dSizeProp';
 
 import PaddingBox from 'layouts/PaddingBox';
 
-import './ScrollPanel.css';
+import './ElasticHeightPanel.css';
 
 /**
+ * <ElasticHeightPanel />
+ *
  * 💥特点，
  *   1️⃣高度弹性但有极限；
  *
  * @param {string} size 格式："宽 极限高度"，例："240px 480px"。
  */
-function ScrollPanel({
+function ElasticHeightPanel({
   size = 'auto',
   children,
   style = {},
@@ -33,7 +35,7 @@ function ScrollPanel({
   return (
     <PaddingBox
       padding="1px"
-      className={cn('scroll-panel', className)}
+      className={cn('elastic-height-panel', className)}
       style={merge({ width }, style)}
       {...restProps}
     >
@@ -46,11 +48,11 @@ function ScrollPanel({
   );
 }
 
-ScrollPanel.propTypes = {
+ElasticHeightPanel.propTypes = {
   size: PropTypes.string.isRequired,
 
   className: PropTypes.string,
   style: PropTypes.object,
 };
 
-export default ScrollPanel;
+export default ElasticHeightPanel;

@@ -1,14 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import ScrollPanel from './ScrollPanel';
+import ElasticHeightPanel from './ElasticHeightPanel';
 
 import Circle from 'kits/Circle';
 import './Demo.css';
 
-storiesOf('组件/带滚动条的面板', module).add('默认', () => (
+storiesOf('组件/弹性高度面板', module).add('默认', () => (
   <>
-    <ScrollPanel size="244px 500px" className="scroll-panel-corner-radius-6 left st-mgn">
+    <ElasticHeightPanel
+      size="244px 500px"
+      className="scroll-panel-corner-radius-6 left st-mgn"
+    >
       <Circle size="100px" style={{ background: '#000' }} />
       <Circle size="100px" style={{ background: '#000' }} />
       <Circle size="100px" style={{ background: '#000' }} />
@@ -19,6 +22,6 @@ storiesOf('组件/带滚动条的面板', module).add('默认', () => (
       <Circle size="100px" style={{ background: '#000' }} />
       <Circle size="100px" style={{ background: '#000' }} />
       <Circle size="100px" style={{ background: '#000' }} />
-    </ScrollPanel>
+    </ElasticHeightPanel>
   </>
 ));
