@@ -72,7 +72,10 @@ CongruentGrid.propTypes = {
   rowHeight: PropTypes.string.isRequired,
   columnWidth: PropTypes.string.isRequired,
 
-  children: PropTypes.array.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]).isRequired,
 
   className: PropTypes.string,
   style: PropTypes.object,

@@ -1,0 +1,7 @@
+.ctx-menu-panel {
+  border-radius: 6px;
+}
+
+.ctx-menu-panel > div {
+  border-radius: 6px;
+}
