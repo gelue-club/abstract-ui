@@ -1,3 +1,3 @@
-import  from './';
+import ElasticHeightPanel from './ElasticHeightPanel';
 
-export default ;
+export default ElasticHeightPanel;

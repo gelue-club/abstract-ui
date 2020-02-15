@@ -7,7 +7,7 @@ import XyCenter from 'layouts/XyCenter';
 import IconPublic from './IconPublic';
 import IconClose from './IconClose';
 
-storiesOf('组件/矢量图标', module)
+storiesOf('气泡/组件/矢量图标', module)
   .add('公开', () => (
     <Box>
       <IconPublic />

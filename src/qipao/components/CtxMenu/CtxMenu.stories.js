@@ -7,7 +7,7 @@ import CongruentGrid from 'layouts/CongruentGrid';
 
 import CtxMenu from './CtxMenu';
 
-storiesOf('组件/右键面板按钮', module)
+storiesOf('气泡/组件/右键面板按钮', module)
   .add('右键按钮', () => <CtxMenu />)
   .add('使用网格组织的右键按钮', () => (
     <ShrinkPanel radius="6px" padding="15px" bgColor="#2D2F2F">

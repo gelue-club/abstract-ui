@@ -7,7 +7,7 @@ import collections from './collections';
 import './Brick.css';
 import './Demo.css';
 
-storiesOf('组件/砖块', module)
+storiesOf('气泡/组件/砖块', module)
   .add('完整', () => (
     <Brick
       data={collections[0]}

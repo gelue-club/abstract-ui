@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import ButtonOpenCollection from './ButtonOpenCollection';
 import './ButtonOpenCollection.css';
 
-storiesOf('组件/切换清单的按钮', module).add('默认', () => (
+storiesOf('气泡/组件/切换清单的按钮', module).add('默认', () => (
   <>
     <ButtonOpenCollection
       onClick={() => {
