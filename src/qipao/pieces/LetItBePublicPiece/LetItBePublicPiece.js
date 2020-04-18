@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Draggable from 'react-draggable';
 import Qrcode from 'qrcode.react';
 import cn from 'classnames';
 
-import join from 'lodash/join';
-import isEmpty from 'lodash/isEmpty';
+import join from 'utilities/join';
+import isEmpty from 'utilities/isEmpty';
 
 import SingleLineText from 'kits/SingleLineText';
 
@@ -49,190 +48,178 @@ const LetItBePublicPiece = ({
   );
 
   return (
-    <Draggable handle=".piece-name">
+    <PieceWindow
+      w="280px"
+      name={collections[collectionIndex].title}
+      defaultPosition={defaultPosition}
+      className="let-it-be-public-piece"
+      onClose={() => {
+        closePieceLetItBePublic(index);
+      }}
+    >
       <div
-        style={{
-          width: '280px',
-          height: '494px',
-          position: 'absolute',
-          zIndex: 10000,
-          top: defaultPosition.y,
-          left: defaultPosition.x,
-        }}
+        className={cn('setup-access-code', {
+          hide: !accessCodeSetupPanelVisible,
+        })}
       >
-        <PieceWindow
-          w="280px"
-          name={collections[collectionIndex].title}
-          className="let-it-be-public-piece"
-          onClose={() => {
-            closePieceLetItBePublic(index);
+        <TiledPanel
+          className="overlay"
+          onClick={() => toggleAccessCodeSetupPanelVisible(false)}
+        />
+
+        <XyCenter className="main">
+          <h6>输入访问码</h6>
+          <YGutter height="15px" />
+          <InputGroupSingleChar
+            inputClass="ipt-single-char-customized"
+            charCount={4}
+            width={164}
+            gap={8}
+            then={({ value, actions: { reset } }) => {
+              updateCollectionVisibleType({
+                pivot: collectionIndex,
+                visibleType: 'public-with-password',
+              });
+
+              updateSharedStateUI('public-with-password');
+              updateAccessCode(join(value, ''));
+              toggleAccessCodeSetupPanelVisible(false);
+
+              // 请求服务器的代码可以放在这里...
+
+              setTimeout(() => {
+                reset();
+              }, 0);
+            }}
+          />
+        </XyCenter>
+      </div>
+
+      <YGutter height="25px" />
+      <PaddingBox padding="0 30px">
+        <div
+          className="clearfix qrcode"
+          style={{
+            width: '220px',
+            height: '220px',
+            backgroundColor: '#363636',
+            borderRadius: '3px',
+            position: 'relative',
           }}
         >
-          <div
-            className={cn('setup-access-code', {
-              hide: !accessCodeSetupPanelVisible,
-            })}
-          >
-            <TiledPanel
-              className="overlay"
-              onClick={() => toggleAccessCodeSetupPanelVisible(false)}
+          <XyCenter>
+            <Qrcode
+              bgColor="#363636"
+              fgColor="#fff"
+              level="H"
+              renderAs="svg"
+              size={220 - 15 * 2}
+              value={getPublicUrl({
+                host,
+                userId: collections[collectionIndex].userId,
+                collectionId: collections[collectionIndex].collectionId,
+              })}
             />
+          </XyCenter>
+        </div>
+      </PaddingBox>
 
-            <XyCenter className="main">
-              <h6>输入访问码</h6>
-              <YGutter height="15px" />
-              <InputGroupSingleChar
-                inputClass="ipt-single-char-customized"
-                charCount={4}
-                width={164}
-                gap={8}
-                then={({ value, actions: { reset } }) => {
-                  updateCollectionVisibleType({
-                    pivot: collectionIndex,
-                    visibleType: 'public-with-password',
-                  });
-
-                  updateSharedStateUI('public-with-password');
-                  updateAccessCode(join(value, ''));
-                  toggleAccessCodeSetupPanelVisible(false);
-
-                  // 请求服务器的代码可以放在这里...
-
-                  setTimeout(() => {
-                    reset();
-                  }, 0);
-                }}
-              />
-            </XyCenter>
-          </div>
-
-          <YGutter height="25px" />
-          <PaddingBox padding="0 30px">
-            <div
-              className="clearfix qrcode"
-              style={{
-                width: '220px',
-                height: '220px',
-                backgroundColor: '#363636',
-                borderRadius: '3px',
-                position: 'relative',
-              }}
-            >
-              <XyCenter>
-                <Qrcode
-                  bgColor="#363636"
-                  fgColor="#fff"
-                  level="H"
-                  renderAs="svg"
-                  size={220 - 15 * 2}
-                  value={getPublicUrl({
+      <YGutter height="15px" />
+      <PaddingBox padding="0 30px">
+        <RoundCornerExpandedMask radius="3px">
+          <Expanded2ColsLayout split={0.65}>
+            <div className="unselectable public-url">
+              <PaddingBox padding="0 11px" className="y-center">
+                <SingleLineText size="12px">
+                  {getPublicUrl({
                     host,
                     userId: collections[collectionIndex].userId,
                     collectionId: collections[collectionIndex].collectionId,
                   })}
-                />
-              </XyCenter>
+                </SingleLineText>
+              </PaddingBox>
             </div>
-          </PaddingBox>
 
-          <YGutter height="15px" />
-          <PaddingBox padding="0 30px">
-            <RoundCornerExpandedMask radius="3px">
-              <Expanded2ColsLayout split={0.65}>
-                <div className="unselectable public-url">
-                  <PaddingBox padding="0 11px" className="y-center">
-                    <SingleLineText size="12px">
-                      {getPublicUrl({
-                        host,
-                        userId: collections[collectionIndex].userId,
-                        collectionId: collections[collectionIndex].collectionId,
-                      })}
-                    </SingleLineText>
-                  </PaddingBox>
-                </div>
+            <CopyToClipboard
+              text={getPublicUrl({
+                host,
+                userId: collections[collectionIndex].userId,
+                collectionId: collections[collectionIndex].collectionId,
+              })}
+            >
+              <div className="unselectable btn-copy">
+                <InlineXyCenter>复制链接</InlineXyCenter>
+              </div>
+            </CopyToClipboard>
+          </Expanded2ColsLayout>
+        </RoundCornerExpandedMask>
+      </PaddingBox>
 
-                <CopyToClipboard
-                  text={getPublicUrl({
-                    host,
-                    userId: collections[collectionIndex].userId,
-                    collectionId: collections[collectionIndex].collectionId,
-                  })}
-                >
-                  <div className="unselectable btn-copy">
-                    <InlineXyCenter>复制链接</InlineXyCenter>
-                  </div>
-                </CopyToClipboard>
-              </Expanded2ColsLayout>
-            </RoundCornerExpandedMask>
-          </PaddingBox>
+      <YGutter height="25px" />
+      <PaddingBox padding="0 30px">
+        <span className="col-access-permission">当前访问权限</span>
+      </PaddingBox>
 
-          <YGutter height="25px" />
-          <PaddingBox padding="0 30px">
-            <span className="col-access-permission">当前访问权限</span>
-          </PaddingBox>
+      <YGutter height="5px" />
+      <PaddingBox padding="0 30px">
+        <ExpandedBlockRadioGroup selected={sharedStateUI}>
+          <ExpandedBlockRadioChoice
+            value="private"
+            onClick={() => {
+              if (sharedStateUI === 'public-with-password') {
+                updateAccessCode('');
+              }
 
-          <YGutter height="5px" />
-          <PaddingBox padding="0 30px">
-            <ExpandedBlockRadioGroup selected={sharedStateUI}>
-              <ExpandedBlockRadioChoice
-                value="private"
-                onClick={() => {
-                  if (sharedStateUI === 'public-with-password') {
-                    updateAccessCode('');
-                  }
+              updateCollectionVisibleType({
+                pivot: collectionIndex,
+                collectionId: collections[collectionIndex].collectionId,
+                modificationDetails: {
+                  visibleType: 'private',
+                },
+                cb: () => {
+                  updateSharedStateUI('private');
+                },
+              });
+            }}
+          >
+            私密
+          </ExpandedBlockRadioChoice>
 
-                  updateCollectionVisibleType({
-                    pivot: collectionIndex,
-                    collectionId: collections[collectionIndex].collectionId,
-                    modificationDetails: {
-                      visibleType: 'private',
-                    },
-                    cb: () => {
-                      updateSharedStateUI('private');
-                    },
-                  });
-                }}
-              >
-                私密
-              </ExpandedBlockRadioChoice>
+          <ExpandedBlockRadioChoice
+            value="public"
+            onClick={() => {
+              if (sharedStateUI === 'public-with-password') {
+                updateAccessCode('');
+              }
 
-              <ExpandedBlockRadioChoice
-                value="public"
-                onClick={() => {
-                  if (sharedStateUI === 'public-with-password') {
-                    updateAccessCode('');
-                  }
+              updateCollectionVisibleType({
+                pivot: collectionIndex,
+                collectionId: collections[collectionIndex].collectionId,
+                modificationDetails: {
+                  visibleType: 'public',
+                },
+                cb: () => {
+                  updateSharedStateUI('public');
+                },
+              });
+            }}
+          >
+            公开
+          </ExpandedBlockRadioChoice>
 
-                  updateCollectionVisibleType({
-                    pivot: collectionIndex,
-                    collectionId: collections[collectionIndex].collectionId,
-                    modificationDetails: {
-                      visibleType: 'public',
-                    },
-                    cb: () => {
-                      updateSharedStateUI('public');
-                    },
-                  });
-                }}
-              >
-                公开
-              </ExpandedBlockRadioChoice>
+          <ExpandedBlockRadioChoice
+            value="public-with-password"
+            onClick={() => {
+              // toggleAccessCodeSetupPanelVisible(true);
+            }}
+          >
+            {`访问码${!isEmpty(accessCode) ? `：${accessCode}` : ''}`}
+          </ExpandedBlockRadioChoice>
+        </ExpandedBlockRadioGroup>
+      </PaddingBox>
 
-              <ExpandedBlockRadioChoice
-                value="public-with-password"
-                onClick={() => {
-                  // toggleAccessCodeSetupPanelVisible(true);
-                }}
-              >
-                {`访问码${!isEmpty(accessCode) ? `：${accessCode}` : ''}`}
-              </ExpandedBlockRadioChoice>
-            </ExpandedBlockRadioGroup>
-          </PaddingBox>
-
-          <YGutter height="30px" />
-        </PieceWindow>
-      </div>
-    </Draggable>
+      <YGutter height="30px" />
+    </PieceWindow>
   );
 };
 

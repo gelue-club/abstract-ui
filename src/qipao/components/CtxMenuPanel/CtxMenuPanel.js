@@ -28,17 +28,14 @@ const CtxMenuPanel = ({ children, className = '' }) => (
         columnWidth="70px"
         style={{ backgroundColor: '#2D2F2F' }}
       >
-        { children }
+        {children}
       </CongruentGrid>
     </div>
   </ElasticHeightPanel>
 );
 
 CtxMenuPanel.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   className: PropTypes.string,
 };
 
