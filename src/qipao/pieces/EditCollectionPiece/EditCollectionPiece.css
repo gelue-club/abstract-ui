@@ -1,0 +1,37 @@
+.edit-collection-piece {
+  position: relative;
+}
+
+.edit-collection-piece input,
+.edit-collection-piece textarea {
+  color: #fff;
+
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: #2D2F2F;
+}
+
+.edit-collection-piece input.ipt-collection-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.edit-collection-piece textarea.txt-collection-description {
+  letter-spacing: 0.5px;
+  resize: unset;
+  font-size: 16px;
+  margin-bottom: 75px;
+}
+
+.alert-saved {
+  position: absolute;
+  bottom: 30px;
+  left: 88px;
+
+  color: #fff;
+  background: #000;
+  padding: 10px 14px;
+
+  border-radius: 5px;
+}

@@ -25,7 +25,7 @@ import TiledPanel from 'components/TiledPanel';
 import './LetItBePublicPiece.css';
 
 const LetItBePublicPiece = ({
-  index,
+  positionInPieceOpenedHistory,
 
   defaultPosition = { x: 0, y: 0 },
 
@@ -54,7 +54,7 @@ const LetItBePublicPiece = ({
       defaultPosition={defaultPosition}
       className="let-it-be-public-piece"
       onClose={() => {
-        closePieceLetItBePublic(index);
+        closePieceLetItBePublic(positionInPieceOpenedHistory);
       }}
     >
       <div

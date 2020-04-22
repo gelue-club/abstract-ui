@@ -6,6 +6,7 @@ import XyCenter from 'layouts/XyCenter';
 
 import IconPublic from './IconPublic';
 import IconClose from './IconClose';
+import IconEdit from './IconEdit';
 
 storiesOf('气泡/组件/矢量图标', module)
   .add('公开', () => (
@@ -16,6 +17,11 @@ storiesOf('气泡/组件/矢量图标', module)
   .add('关闭', () => (
     <Box>
       <IconClose size="12px" />
+    </Box>
+  ))
+  .add('编辑', () => (
+    <Box>
+      <IconEdit size="12px" />
     </Box>
   ));
 
