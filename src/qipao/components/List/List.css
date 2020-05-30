@@ -7,17 +7,26 @@
 }
 
 .list-row {
+  height: 48px !important;
   border-bottom: 8px solid transparent;
 }
 
 .list-row:first-child {
+  height: 66px !important;
   border-top: 18px solid transparent;
 }
 
 .list-row:last-child {
+  height: 58px !important;
   border-bottom: 18px solid transparent;
 }
 
 .simplebar-scrollbar:before {
   background: red !important;
+}
+
+
+
+.list.align-right .list-row > div {
+  text-align: right;
 }

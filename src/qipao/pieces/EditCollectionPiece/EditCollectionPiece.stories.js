@@ -8,7 +8,7 @@ let timeoutHideAlert = null;
 
 storiesOf('气泡/小零件/编辑清单', module).add('默认', () => (
   <EditCollectionPiece
-    showIndex={0}
+    positionInPieceOpenedHistory={0}
     defaultPosition={{ x: 0, y: 0 }}
     collectionIndex={0}
     collections={[

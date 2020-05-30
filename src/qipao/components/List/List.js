@@ -3,10 +3,11 @@
 import React, { useState, createRef, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
-import times from 'utilities/times';
-import isEqual from 'utilities/isEqual';
 import cn from 'classnames';
 import SimpleBar from 'simplebar-react';
+
+import times from 'utilities/times';
+import isEqual from 'utilities/isEqual';
 
 import 'simplebar/dist/simplebar.min.css';
 

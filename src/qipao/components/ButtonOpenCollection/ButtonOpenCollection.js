@@ -14,16 +14,23 @@ const ButtonOpenCollection = ({
   onClick,
   onContextMenu,
   className,
+
+  showNotifer = false,
+  showLogo = false,
 }) => (
   <div
     onClick={onClick}
     onContextMenu={onContextMenu}
     className={cn('border-box unselectable btn-open-collection', className)}
   >
-    <Box padding="0 41px 0 18px">
-      <UpdatedNotifer />
+    <Box
+      padding={`
+        0 ${showLogo ? '41px' : '10px'} 0 ${showNotifer ? '18px' : '10px'}
+      `}
+    >
+      { showNotifer && <UpdatedNotifer /> }
       <SingleLineText size="16px">{children}</SingleLineText>
-      <Logo src="https://picsum.photos/25/25" to="#" />
+      { showLogo && <Logo src="https://picsum.photos/25/25" to="#" /> }
     </Box>
   </div>
 );

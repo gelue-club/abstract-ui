@@ -24,13 +24,19 @@
   background: #ea514e;
 }
 
-.clcn-logo {
+.btn-open-collection .clcn-logo {
   overflow: hidden;
   border-radius: 8px;
   right: -33px;
 }
 
-.clcn-updated-notifier {
-  left: -14px;
+.btn-open-collection .clcn-updated-notifier {
+  left: -8px;
   background: #ea514e;
+}
+
+
+
+.btn-open-collection.flex-width {
+  display: inline-block;
 }
