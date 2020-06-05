@@ -17,7 +17,7 @@ IGItem.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
 
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  children: PropTypes.any,
 };
 
 export default IGItem;
