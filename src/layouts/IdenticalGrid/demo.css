@@ -1,0 +1,8 @@
+.demo-numbers-group > .identical-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-radius: 100%;
+  background-color: aqua;
+}
