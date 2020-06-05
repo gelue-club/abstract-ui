@@ -5,6 +5,7 @@ import LetItBePublicPiece from './LetItBePublicPiece';
 
 storiesOf('气泡/小零件/分享', module).add('默认', () => (
   <LetItBePublicPiece
+    defaultPosition={{ x: 50, y: 40 }}
     positionInPieceOpenedHistory={0}
     collectionIndex={0}
     collections={[
