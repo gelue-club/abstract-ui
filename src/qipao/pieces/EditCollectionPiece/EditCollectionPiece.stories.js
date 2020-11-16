@@ -16,7 +16,7 @@ storiesOf('气泡/小零件/编辑清单', module).add('默认', () => (
         userId: 'Sk7vBbOJG',
         collectionId: 'ry-JR0rm7',
         visibleType: 'public',
-        title: '低成本创业',
+        title: 'C / C++ 开发环境',
         description:
           '也许一份 20 多块钱的黄焖鸡可以让你情不自禁取代原本 100 多块钱吃呷浦呷浦的开销，满足食欲的同时你也省下了几十块钱，何乐不为呢？',
       },
