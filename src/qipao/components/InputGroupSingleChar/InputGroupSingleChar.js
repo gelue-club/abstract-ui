@@ -33,8 +33,10 @@ import './InputGroupSingleChar.css';
  *  - [X] reset，清空
  *
  * 待办：
- *  - [ ] 将验证逻辑分离，以 `props` 的方式传入
- *  - [ ] `next()` 执行时机：回车
+ *  - [ ] 将验证逻辑分离，以 `props` 的方式传入；
+ *  - [ ] `next()` 执行时机：回车；
+ *  - [ ] 支持自定义加载状态；
+ *  - [ ] 是否保留报错状态，提供可配置的空间，如：出错的输入框显示成红色的；
  */
 let cachedValue;
 function InputGroupSingleChar({
